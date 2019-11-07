@@ -1,6 +1,6 @@
 from os import sys
 import random
-import textwrap
+from collections import defaultdict
 
 #Rearrange a string given in the terminal
 def rearrange(arguments):
@@ -12,26 +12,39 @@ def rearrange(arguments):
         length -= 1
     return output
 
+#Fisher Yates Shuffle
+def fisher_yates_shuffle(obj):
+    if obj == str(obj):
+        string = True
+    else:
+        string = False
+
+    obj = list(obj)
+    num = len(obj)
+
+    while num:
+        num -= 1
+        random = randint(0, num)
+        hold = obj[num]
+        obj[num] = obj[random]
+        obj[random] = hold
+
+    if string:
+        obj = ''.join(obj)
+    return obj
+
+def shuffle(arguments):
+    fisher_yates_shuffle(arguments)
+    return arguments
+
 #Reverse!
 def reverse(arguments):
     str=arguments
     slicedString=str[stringlength :: -1]
     return(slicedString)
 
-#Anagrams
-def anagram(arguments):
-    arguments = word
-    if len(word) < 2:
-        return word
-    else:
-        tmp = []
-        for i, letter in enumerate(word):
-            for j in anagrams(word[:i]+word[i+1]):
-                tmp.append(j+letter)
-    return tmp
-
 if __name__ == '__main__':
     arguments = sys.argv[1:]
     input = sys.argv
-    output = anagram(arguments)
-    print anagram(input)
+    word_source = load_anagram_words()
+    print_anagrams(word_source)
