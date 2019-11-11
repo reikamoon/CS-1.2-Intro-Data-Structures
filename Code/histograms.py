@@ -43,7 +43,7 @@ def tuples(word_list):
                 histogram[histogram.index(tup)] = (word, tup[1] + 1)
                 added = False
         if added:
-            histogram.append((words, 1))
+            histogram.append((word, 1))
         added = True
     return histogram
 
