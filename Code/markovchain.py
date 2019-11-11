@@ -7,7 +7,7 @@ transitionName = [["SS", "SR", "SI"],["RS", "RR", "RI"], ["IS", "IR", "II"]]
 
 transitionMatrix = [[0.2, 0.6, 0.2], [0.1, 0.6, 0.3], [0.2, 0.7, 0.1]]
 
-if sum(transitionMatrix[0])+sum(transitionMatrix[1])+sum(transitionName[1]) != 3:
+if sum(transitionMatrix[0])+sum(transitionMatrix[1])+sum(transitionName[2]) != 3:
     print("ERROR!")
 else:
     print("Matrix is functioning properly!")
