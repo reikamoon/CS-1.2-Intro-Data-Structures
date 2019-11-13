@@ -3,10 +3,10 @@ import textwrap
 #Reference Code by wookiecooking
 #dog by asciiart.eu
 
-def dogsay(str, length=10):
-    return build_bubble(str, length) + build_dog()
+def cowsay(str, length=10):
+    return build_bubble(str, length) + build_cow()
 
-def build_dog():
+def build_cow():
     return """
    \      _   _
     \    /(. .)\    )
@@ -55,7 +55,7 @@ def get_border(lines, index):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print "Usage: '%s string'" % sys.argv[0]
+        print("Usage: '%s string'" % sys.argv[0])
         sys.exit(0)
 
-    print dogsay(sys.argv[1])
+    print cowsay(sys.argv[1])
