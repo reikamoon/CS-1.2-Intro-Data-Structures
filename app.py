@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from Code.dictionary_words import *
 from random import randint
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates')
 
 @app.route('/')
 def home():
