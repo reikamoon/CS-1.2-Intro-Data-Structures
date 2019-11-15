@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from Code.dictionary_words import *
 from random import randint
+from Code.listogram import *
 
 app = Flask(__name__, template_folder='Templates')
 
@@ -10,6 +11,8 @@ def home():
 
 @app.route('/result')
 def show_results():
+    listogram = Listogram(["apple", "pear", "strawberry"])
+    random_word = listogram.sample()
 
     return render_template('results.html')
 
