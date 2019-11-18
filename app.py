@@ -13,8 +13,7 @@ def home():
 def show_results():
     listogram = Listogram(["apple", "pear", "strawberry"])
     random_word = listogram.sample()
-
-    return render_template('results.html')
+    return render_template('results.html', random_word=random_word)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))

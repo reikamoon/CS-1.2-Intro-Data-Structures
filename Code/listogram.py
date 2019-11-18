@@ -42,7 +42,7 @@ class Listogram(list):
     def __contains__(self, word):
         """Return boolean indicating if given word is in this histogram."""
         # TODO: Check if word is in this histogram
-         for index in range(len(self)):
+        for index in range(len(self)):
             if word == self[index][0]:
                 return True
         return False
@@ -51,7 +51,7 @@ class Listogram(list):
         """Return the index of entry containing given target word if found in
         this histogram, or None if target word is not found."""
         # TODO: Implement linear search to find index of entry with target word
-         for index in range(len(self)):
+        for index in range(len(self)):
             if target == self[index][0]:
                 return index
         return None
@@ -60,7 +60,7 @@ class Listogram(list):
         """Return a word from this histogram, randomly sampled by weighting
         each word's probability of being chosen by its observed frequency."""
         # TODO: Randomly choose a word based on its frequency in this histogram
-           count = randint(1, self.tokens)
+        count = random.randint(1, self.tokens)
         for word in self:
             count -= word[1]
             if count <= 0:
