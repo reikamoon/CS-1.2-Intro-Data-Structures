@@ -2,6 +2,7 @@ from dictogram import Dictogram
 from random import choice
 
 def markov_chain(word_list):
+    markov = {}
     for i in range(len(word_list)):
         if word_list[i] not in markov:
             markov[word_list[i]] = []

@@ -11,7 +11,7 @@ def home():
 
 @app.route('/result')
 def show_results():
-    listogram = Listogram(["apple", "pear", "strawberry"])
+    listogram = Listogram(["apple", "pear", "strawberry", "orange", "mango", "banana"])
     random_word = listogram.sample()
     return render_template('results.html', random_word=random_word)
 
