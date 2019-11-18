@@ -30,10 +30,9 @@ class Markov():
             string += word + " "
         return string
 
-    def main(num):
+    def markov(num):
         markov = Markov('markov.txt')
-
         return markov.walk(num)
 
 if __name__ == '__main__':
-    main(5)
+    markov()
