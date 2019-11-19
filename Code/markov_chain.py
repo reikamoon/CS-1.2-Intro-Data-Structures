@@ -18,7 +18,7 @@ class Markov():
         for key in markov:
             markov[key] = Dictogram(markov[key])
 
-            return markov
+        return markov
 
     def walk(self, length):
         output = []
@@ -37,3 +37,4 @@ def markov(num):
 
 if __name__ == '__main__':
     markov(5)
+    print(markov(5))

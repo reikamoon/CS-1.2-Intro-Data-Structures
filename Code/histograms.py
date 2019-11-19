@@ -7,6 +7,7 @@ def read_file(file_name):
     #Read in file
     with open(file_name, 'r') as f:
         words = f.read().split()
+    return words
 
 def list_of_lists(word_list):
     #List of Lists
