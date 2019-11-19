@@ -1,4 +1,5 @@
-from dictogram import Dictogram
+from dictogram import *
+from histograms import *
 from random import choice
 
 class Markov():
@@ -30,9 +31,9 @@ class Markov():
             string += word + " "
         return string
 
-    def markov(num):
-        markov = Markov('markov.txt')
-        return markov.walk(num)
+def markov(num):
+    markov = Markov('Code/markov.txt')
+    return markov.walk(num)
 
 if __name__ == '__main__':
-    markov()
+    markov(5)
