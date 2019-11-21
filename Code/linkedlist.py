@@ -89,7 +89,7 @@ class LinkedList(object):
             self.head = new_node
             self.tail = new_node
 
-    def find(self, quality):
+    def find(self, quality, data = True):
         """Return an item from this linked list satisfying the given quality.
         TODO: Best case running time: O(???) Why and under what conditions?
         TODO: Worst case running time: O(???) Why and under what conditions?"""
@@ -97,6 +97,8 @@ class LinkedList(object):
         node = self.head
         while node != None:
             if quality(node.data) == True:
+                if data == False:
+                    return node
                 return node.data
             else:
                 node = node.next
@@ -117,20 +119,34 @@ class LinkedList(object):
         if self.head is None:
             raise ValueError('Item not found: {}'.format(item))
         if item == self.head.data:
+            if current_node == self.tail:
+                del(self.head)
+                self.head = None
+                self.tail = None
+                return
+
             del(self.head)
-            self.head = None
-            self.tail = None
+            self.head = current_node.next
             return
-        previous_node = current_node
-        current_node = current_node.next
+
         while current_node != None:
             if item == current_node.data:
+                if item == self.tail.data:
+                    del(self.tail)
+                    previous_node.next = None
+                    self.tail = previous_node
+                    return
+
                 previous_node.next = current_node.next
                 del(current_node)
                 return
             previous_node = current_node
             current_node = current_node.next
         raise ValueError('Item not found: {}'.format(item))
+
+    def replace(self, item, new_item):
+        node = self.find(lambda x: x == item, False)
+        node.data = new_item
 
 
 def test_linked_list():
@@ -148,7 +164,7 @@ def test_linked_list():
     print('length: {}'.format(ll.length()))
 
     # Enable this after implementing delete method
-    delete_implemented = False
+    delete_implemented = True
     if delete_implemented:
         print('\nTesting delete:')
         for item in ['B', 'C', 'A']:
