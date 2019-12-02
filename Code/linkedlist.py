@@ -98,7 +98,6 @@ class LinkedList(object):
         while node != None:
             if quality(node.data) == True:
             #if quality == node.data:
-                print("Found " + node.data)
                 if data == False:
                     return node
                 return node.data
@@ -156,9 +155,9 @@ class LinkedList(object):
 
         print('\nTesting append:')
         for item in ['A', 'B', 'C']:
-        print('append({!r})'.format(item))
-        ll.append(item)
-        print('list: {}'.format(ll))
+            print('append({!r})'.format(item))
+            ll.append(item)
+            print('list: {}'.format(ll))
 
         print('head: {}'.format(ll.head))
         print('tail: {}'.format(ll.tail))
@@ -166,18 +165,18 @@ class LinkedList(object):
         #ll.find('B')
         ll.find(lambda item: item > 'B')
 
-    # Enable this after implementing delete method
-    delete_implemented = True
-    if delete_implemented:
-        print('\nTesting delete:')
-        for item in ['B', 'C', 'A']:
-            print('delete({!r})'.format(item))
-            ll.delete(item)
-            print('list: {}'.format(ll))
+        # Enable this after implementing delete method
+        delete_implemented = True
+        if delete_implemented:
+            print('\nTesting delete:')
+            for item in ['B', 'C', 'A']:
+                print('delete({!r})'.format(item))
+                ll.delete(item)
+                print('list: {}'.format(ll))
 
-        print('head: {}'.format(ll.head))
-        print('tail: {}'.format(ll.tail))
-        print('length: {}'.format(ll.length()))
+            print('head: {}'.format(ll.head))
+            print('tail: {}'.format(ll.tail))
+            print('length: {}'.format(ll.length()))
 
 
 if __name__ == '__main__':

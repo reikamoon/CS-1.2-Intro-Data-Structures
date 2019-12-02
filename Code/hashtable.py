@@ -143,8 +143,8 @@ def test_hash_table():
         value = ht.get(key)
         print('get({!r}): {!r}'.format(key, value))
 
-    print('contains({!r}): {}'.format('X', ht.contains('X')))
-    print('length: {}'.format(ht.length()))
+        print('contains({!r}): {}'.format('X', ht.contains('X')))
+        print('length: {}'.format(ht.length()))
 
     # Enable this after implementing delete method
     delete_implemented = True
@@ -155,8 +155,8 @@ def test_hash_table():
             ht.delete(key)
             print('hash table: {}'.format(ht))
 
-        print('contains(X): {}'.format(ht.contains('X')))
-        print('length: {}'.format(ht.length()))
+            print('contains(X): {}'.format(ht.contains('X')))
+            print('length: {}'.format(ht.length()))
 
 
 if __name__ == '__main__':
