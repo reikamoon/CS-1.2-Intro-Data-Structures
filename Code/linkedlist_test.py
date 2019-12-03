@@ -137,6 +137,11 @@ class LinkedListTest(unittest.TestCase):
         assert ll.head.data == 'A'  # New head
         assert ll.tail.data == 'C'  # Unchanged
 
+    def check_equal_B(item):
+        if item == 'B':
+            return true
+        return False
+
     def test_find(self):
         ll = LinkedList(['A', 'B', 'C'])
         assert ll.find(lambda item: item == 'B') == 'B'  # Match equality
@@ -190,6 +195,22 @@ class LinkedListTest(unittest.TestCase):
         # Delete should raise error if item not found
         with self.assertRaises(ValueError):
             ll.delete('X')  # Item not found in list
+
+    def test_linked_list():
+        ll = LinkedList()
+        print('list: {}'.format(ll))
+
+        print('\nTesting append:')
+        for item in ['A', 'B', 'C']:
+            print('append({!r})'.format(item))
+            ll.append(item)
+            print('list: {}'.format(ll))
+
+        print('head: {}'.format(ll.head))
+        print('tail: {}'.format(ll.tail))
+        print('length: {}'.format(ll.length()))
+        #ll.find('B')
+        ll.find(lambda item: item > 'B')
 
 
 if __name__ == '__main__':
