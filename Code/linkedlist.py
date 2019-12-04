@@ -179,19 +179,6 @@ class LinkedList(object):
         node.data = new_item
 
 
-        # Enable this after implementing delete method
-        delete_implemented = True
-        if delete_implemented:
-            print('\nTesting delete:')
-            for item in ['B', 'C', 'A']:
-                print('delete({!r})'.format(item))
-                ll.delete(item)
-                print('list: {}'.format(ll))
-
-            print('head: {}'.format(ll.head))
-            print('tail: {}'.format(ll.tail))
-            print('length: {}'.format(ll.length()))
-
     def test_linked_list():
         ll = LinkedList()
         print('list: {}'.format(ll))
@@ -207,6 +194,19 @@ class LinkedList(object):
         print('length: {}'.format(ll.length()))
         #ll.find('B')
         ll.find(lambda item: item > 'B')
+
+        # Enable this after implementing delete method
+        delete_implemented = True
+        if delete_implemented:
+            print('\nTesting delete:')
+            for item in ['B', 'C', 'A']:
+                print('delete({!r})'.format(item))
+                ll.delete(item)
+                print('list: {}'.format(ll))
+
+            print('head: {}'.format(ll.head))
+            print('tail: {}'.format(ll.tail))
+            print('length: {}'.format(ll.length()))
 
 if __name__ == '__main__':
     test_linked_list()
