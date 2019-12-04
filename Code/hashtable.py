@@ -34,8 +34,10 @@ class HashTable(object):
                 all_keys.append(key)
         return all_keys
         """Time Complexity -
-            Best Case:
-            Worst Case:
+            Best Case: O(n/b)
+            Worst Case: O(n/b)
+            Keys undergoes as many processes as there are buckets, no matter what, since it has to look
+            for all the keys, which are kept in buckets.
             """
 
     def values(self):
