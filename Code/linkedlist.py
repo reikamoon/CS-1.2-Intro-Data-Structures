@@ -192,6 +192,21 @@ class LinkedList(object):
             print('tail: {}'.format(ll.tail))
             print('length: {}'.format(ll.length()))
 
+    def test_linked_list():
+        ll = LinkedList()
+        print('list: {}'.format(ll))
+
+        print('\nTesting append:')
+        for item in ['A', 'B', 'C']:
+            print('append({!r})'.format(item))
+            ll.append(item)
+            print('list: {}'.format(ll))
+
+        print('head: {}'.format(ll.head))
+        print('tail: {}'.format(ll.tail))
+        print('length: {}'.format(ll.length()))
+        #ll.find('B')
+        ll.find(lambda item: item > 'B')
 
 if __name__ == '__main__':
     test_linked_list()
