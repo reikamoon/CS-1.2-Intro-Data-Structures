@@ -34,10 +34,10 @@ class HashTable(object):
                 all_keys.append(key)
         return all_keys
         """Time Complexity -
-            Best Case: O(n/b)
-            Worst Case: O(n/b)
+            Best Case: O(n)
+            Worst Case: O(n)
             Keys undergoes as many processes as there are buckets, no matter what, since it has to look
-            for all the keys, which are kept in buckets.
+            for all the keys, which are kept in buckets. It loops through each key once.
             """
 
     def values(self):
@@ -52,12 +52,10 @@ class HashTable(object):
 
         return all_values
         """Time Complexity -
-            Best Case: O(n/b)
-            Average Case: O(n/b)
+            Best Case: O(n)
+            Average Case: O(n)
             As the values() undergoes a for loop, showing everu bucket and the keys inside and
-            the values inside these keys,
-            it is ideal for this loop to keep going, and show everything, including what
-            has been added or removed. This is why both cases would be
+            the values inside these keys. It loops through each value once.
             """
 
     def items(self):
@@ -69,10 +67,10 @@ class HashTable(object):
             all_items.extend(bucket.items())
         return all_items
         """Time Complexity -
-            Best Case: O(n/b)
-            Average Case: O(n/b)
+            Best Case: O(n)
+            Average Case: O(n)
             Both cases would loop, as it is the same as the values() but instead of just
-            showing the values, it would show the items in the buckets as well.
+            showing the values, it would show the items in the buckets as well. It loops through each item once.
             """
 
     def length(self):

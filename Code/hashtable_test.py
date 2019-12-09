@@ -89,6 +89,22 @@ class HashTableTest(unittest.TestCase):
         assert ht.get('X') == 10
         assert ht.length() == 3  # Check length is not overcounting
 
+
+        #My Test!
+    def test_set_thrice_and_get(self):
+        ht = HashTable()
+        ht.set('I', 1)
+        ht.set('V', 4)
+        ht.set('X', 9)
+        assert ht.length() == 3
+        ht.set('V', 5)  # Update value
+        ht.set('X', 10) # Update value
+        ht.set('I', 15)
+        assert ht.get('I') == 15
+        assert ht.get('V') == 5
+        assert ht.get('X') == 10
+        assert ht.length() == 3  # Check length is not overcounting
+
     def test_delete(self):
         ht = HashTable()
         ht.set('I', 1)

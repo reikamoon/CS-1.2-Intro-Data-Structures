@@ -5,7 +5,7 @@ from random import choice
 class Markov():
     def __init__(self, word_file):
         self.word_list = read_file(word_file)
-        self.markov = self.make_chain(self.word_list)
+        self.markov = self.mak e_chain(self.word_list)
 
     def make_chain(self, word_list):
         markov = {}
@@ -32,7 +32,7 @@ class Markov():
         return string
 
 def markov(num):
-    markov = Markov('Code/markov.txt')
+    markov = Markov('Code/groh.txt')
     return markov.walk(num)
 
 if __name__ == '__main__':
