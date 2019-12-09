@@ -2,13 +2,20 @@
 
 {% block content %}
 {% include 'partials/navbar.html' %}
+<style>
+    .button {
+    position: absolute;
+    left: 680px;
+    top: 100px;
+    }
+</style>
 <body>
 <br><br>
 <center>
 <h3>{{random_word}}</h3>
 </center>
 <br><br>
-<button onClick="window.location.reload();">New Tweet</button>
+<div class = "button"><button type="button" class="btn btn-primary" onClick="window.location.reload();">New Tweet</button></div>
 </body>
 </html>
 {% endblock content %}
