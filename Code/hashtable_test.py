@@ -105,6 +105,7 @@ class HashTableTest(unittest.TestCase):
         assert ht.get('X') == 10
         assert ht.length() == 3  # Check length is not overcounting
 
+
     def test_delete(self):
         ht = HashTable()
         ht.set('I', 1)
