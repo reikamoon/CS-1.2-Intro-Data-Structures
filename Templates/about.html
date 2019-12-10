@@ -1,5 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% include 'partials/navbar.html' %}
+<style>
+  .title {
+  position: absolute;
+  left: 450px;
+  top: 100px;
+  }
+  .text {
+  position: absolute;
+  left: 320px;
+  top: 200px;
+  }
+</style>
+<body>
+<div class = "title"><h1>Chevalier Mal Fet! (The Ill-Made Knight)</h1></div>
+<div class = "text"><h2>I was able to create a sentence generator using a higher order Markov chain,<br>
+while using "The Ill Made Knight" (also known as Chevalier Mal Fet) by T.H. White.</h2></div>
+</body>
 {& endblock content %}
