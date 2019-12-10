@@ -1,6 +1,6 @@
-from dictogram import *
-from histograms import *
-from queue import *
+from Code.dictogram import *
+from Code.histograms import *
+from Code.queue import *
 from random import choice
 
 class Markov():
@@ -46,7 +46,7 @@ class MarkovChainHigher():
         queue = Queue()
         markov = {}
         n = self.n
-        if queue.len == 0:
+        if queue.length() == 0:
             for i in range(n):
                 queue.enqueue(word_list[i])
         for words in word_list:
