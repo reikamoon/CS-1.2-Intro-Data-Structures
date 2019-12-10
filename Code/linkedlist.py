@@ -24,6 +24,9 @@ class LinkedList(object):
             for item in items:
                 self.append(item)
 
+    def __iter__(self):
+        return iter([value for value in self.items()])
+
     def __str__(self):
         """Return a formatted string representation of this linked list."""
         items = ['({!r})'.format(item) for item in self.items()]
@@ -177,6 +180,7 @@ class LinkedList(object):
     def replace(self, item, new_item):
         node = self.find(lambda x: x == item, False)
         node.data = new_item
+
 
 
     def test_linked_list():
