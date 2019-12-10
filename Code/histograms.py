@@ -8,6 +8,7 @@ def read_file(file_name):
     with open(file_name, 'r') as f:
         words = f.read().split()
 
+    # Parse File
     unwanted_punctuation_table = dict.fromkeys(map(ord, '\n\r"”“”‘’-_…:*'), None)
     parsed_text = [word.translate(str.maketrans(unwanted_punctuation_table)) for word in words]
     return parsed_text

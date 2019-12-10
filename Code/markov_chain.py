@@ -66,8 +66,11 @@ class MarkovChainHigher():
     def walk(self):
         output = []
         output.append(choice(tuple(self.markov.keys())))
+
+        #Start Token: Must start with an uppercase letter.
         while output[0][0].islower():
             output[0] = choice(tuple(self.markov.keys()))
+        #Stop Token: Must end with a period.
         i = 0
         while output[-1][-1] != ".":
             output.append(self.markov[output[i]].sample())
