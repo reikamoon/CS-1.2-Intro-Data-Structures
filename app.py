@@ -3,7 +3,7 @@ from Code.dictionary_words import *
 from random import randint
 from Code.listogram import *
 from Code.markov_chain import *
-from TwitterAPI import TwitterAPI
+# from TwitterAPI import TwitterAPI
 
 app = Flask(__name__, template_folder='Templates')
 #
