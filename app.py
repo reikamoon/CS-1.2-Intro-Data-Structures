@@ -19,6 +19,10 @@ def show_results():
     print(tweet)
     return render_template('results.html', tweet=tweet)
 
+@app.route('/about')
+def about_page():
+    return render_template('about.html')
+
 # @app.route('/tweet', methods=['POST', 'GET'])
 # def tweet():
 #     r = api.request('statuses/update', {'status':{{tweet}}})
